@@ -12,7 +12,7 @@ export default async function List() {
     <div className="list-bg">
       {result.map(({ title, date, _id }) => {
         return (
-          // <Link className="list-item" key={_id.toString()} href={`/detail/${_id.toString()}`}>
+          // <Link className="list-item" prefetch={false} key={_id.toString()} href={`/detail/${_id.toString()}`}>
           //   <h4>{title}</h4>
           //   <p>{date}</p>
           // </Link>
