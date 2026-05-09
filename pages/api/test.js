@@ -1,4 +1,3 @@
-export default function handler(response, answer) {
-  console.log(123);
-  return answer.status(200).json('처리완료');
+export default function handler(request, response) {
+  return response.status(200).json('처리완료');
 }

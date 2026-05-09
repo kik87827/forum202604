@@ -9,8 +9,12 @@ export default async function handler(response, answer) {
     if (response.body.content === '') {
       return answer.status(500).json('내용 입력하세요');
     }
-    const db = (await connectDB).db('forum_2025');
-    let result = await db.collection('post').insertOne(response.body);
-    return answer.status(200).redirect('/list');
+    try {
+      const db = (await connectDB).db('forum_2025');
+      let result = await db.collection('post').insertOne(response.body);
+      return answer.status(200).redirect('/list');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

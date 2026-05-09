@@ -12,11 +12,14 @@ export default async function List() {
     <div className="list-bg">
       {result.map(({ title, date, _id }) => {
         return (
-          // <Link className="list-item" prefetch={false} key={_id.toString()} href={`/detail/${_id.toString()}`}>
-          //   <h4>{title}</h4>
-          //   <p>{date}</p>
-          // </Link>
-          <DetailLink className="list-item" key={_id.toString()} href={`/detail/${_id.toString()}`} title={title} date={date} />
+          <div className="list-item">
+            <Link prefetch={false} key={_id.toString()} href={`/detail/${_id.toString()}`}>
+              <h4>{title}</h4>
+            </Link>
+            <Link href={`/edit/${_id.toString()}`}>✏️</Link>
+            <p>{date}</p>
+          </div>
+          //<DetailLink className="list-item" key={_id.toString()} href={`/detail/${_id.toString()}`} title={title} date={date} />
         );
       })}
     </div>
