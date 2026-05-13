@@ -47,6 +47,12 @@ button {
   border: none;
   border-radius: 5px;
 }
+button.btn_ico {
+  background: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+}
 a {
   text-decoration: none;
   color: black;
@@ -62,4 +68,16 @@ a {
 }
 .logo {
   font-weight: bold;
+}
+.fade-target {
+  opacity: 1;
+  transition: 0.5ms;
+}
+.fade {
+  opacity: 1;
+  transition: 0.5ms;
+}
+
+.end {
+  opacity: 0;
 }
