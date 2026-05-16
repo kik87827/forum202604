@@ -19,6 +19,8 @@ body {
   appearance: none;
   width: 100%;
   box-sizing: border-box;
+  opacity: 1;
+  transition: all 1s;
 }
 .list-item * {
   color: #000;
