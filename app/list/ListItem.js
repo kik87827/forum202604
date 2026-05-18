@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
+export const revalidate = 60;
+
 export default function ListItem({ result }) {
   /* useEffect(() => {
     // 서버에 부탁해서 DB게시물 가져옴
@@ -68,7 +70,7 @@ export default function ListItem({ result }) {
                       parseFloat(parentDuration) * 1000,
                     );
                   }); */
-                fetch(`/api/abc/${_id}`, { next: { revalidate: 60 } })
+                fetch(`/api/abc/${_id}`, { cache: 'no-store' })
                   .then((result) => {
                     return result.json();
                   })

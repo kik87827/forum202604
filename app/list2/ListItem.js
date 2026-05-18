@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
+export const revalidate = 20;
+
 export default function ListItem({ result }) {
   /* useEffect(() => {
     // 서버에 부탁해서 DB게시물 가져옴
